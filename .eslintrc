@@ -12,9 +12,15 @@
     "window": true,
     "document": true
   },
+  "env": {
+    "browser": true
+  },
   "rules": {
     "prettier/prettier": [
-      "error"
+      "error",
+      {
+        "endOfLine": "auto"
+      }
     ],
     "no-console": 0,
     "import/no-unresolved": 0,

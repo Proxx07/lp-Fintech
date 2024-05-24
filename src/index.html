@@ -9,13 +9,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
   </head>
 
   <body>
     <div class="site-wrapper">
       <header class="header">
         <div class="container inner">
+          <button class="burger-button burger-toggle-js">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <div class="left">
             <div class="logo">
               <img src="./img/icons/Logo.svg" alt="Fintech Platforms" />
@@ -23,39 +28,39 @@
             <nav class="menu">
               <ul>
                 <li>
-                  <a href="#">О нас</a>
+                  <a href="#about" data-ln="menu_about">О нас</a>
                 </li>
                 <li>
-                  <a href="#">Услуги</a>
+                  <a href="#services" data-ln="menu_services">Услуги</a>
                 </li>
                 <li>
-                  <a href="#">Кейсы</a>
+                  <a href="#cases" data-ln="menu_cases">Кейсы</a>
                 </li>
                 <li>
-                  <a href="#">Контакты</a>
+                  <a href="#" data-ln="menu_contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
           </div>
 
           <div class="right">
-            <div class="language hidden">
-              <button class="lang-title">
-                <span>Ру</span>
-              </button>
+            <div class="language">
+              <button class="lang-title">Ру</button>
               <div class="dropdown lang-buttons">
-                <button class="lang-item">O'z</button>
-                <button class="lang-item">Ру</button>
-                <button class="lang-item">En</button>
+                <button class="lang-item" data-key="uz">O'z</button>
+                <button class="lang-item" data-key="ru">Ру</button>
+                <button class="lang-item" data-key="en">En</button>
               </div>
             </div>
-            <button class="callback-button primary-button">
+            <button
+              class="callback-button primary-button"
+              data-ln="callback_button"
+            >
               Связаться с нами
             </button>
           </div>
         </div>
       </header>
-
       <div class="top-group">
         <div class="banner">
           <div class="container">
@@ -70,7 +75,7 @@
           </div>
         </div>
 
-        <section class="about container">
+        <section class="about container" id="about">
           <h2>О нас</h2>
           <div class="text">
             FinTech Platforms – ведущие разработчики инновационных решений в
@@ -103,7 +108,7 @@
         </section>
       </div>
 
-      <section class="decisions container">
+      <section class="decisions container" id="services">
         <h2>ИНДИВИДУАЛЬНЫЕ FINTECH РЕШЕНИЯ ОТ FINTECH PLATFORMS</h2>
 
         <div class="decisions-inner">
@@ -219,7 +224,7 @@
         </div>
       </section>
 
-      <section class="actual-cases container">
+      <section class="actual-cases container" id="cases">
         <h2>Актуальные кейсы</h2>
 
         <div class="cases-inner">
@@ -447,6 +452,20 @@
         </div>
         <div class="adress">г.Ташкент Садыка Азимова 1/28</div>
       </footer>
+
+      <div class="burger burger-js">
+        <div class="backdrop burger-toggle-js"></div>
+
+        <div class="inner">
+          <div class="headline">
+            <div style="width: 36px"></div>
+            <img src="./img/icons/Logo.svg" alt="Logo" />
+            <button class="close burger-toggle-js"></button>
+          </div>
+          <div class="content burger-content-js"></div>
+          <div class="burger-footer"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

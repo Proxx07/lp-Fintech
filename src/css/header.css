@@ -1,25 +1,43 @@
 .header {
-    padding: 2rem 0 2.5rem;
-    background: var(--header-gradient);
-
+    padding: 1.5rem 0 2rem;
+    /* background: var(--header-gradient); */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
     .inner {
         display: flex;
         justify-content: space-between;
+        gap: 2rem;
     }
 
     .left {
         display: flex;
         align-items: center;
+        width: 100%;
+        max-width: 900px;
+        justify-content: space-between;
     }
 
     .logo {
-        min-width: 200px;
+        img {
+            max-height: 50px;
+            @media all and (max-width: 480px) {
+                max-width: 70px;
+            }
+        }
     }
 
     .right {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 5rem;
+        @media all and (max-width: 1024px) {
+            gap: 2rem;
+        }
     }
 
     .language {
@@ -29,24 +47,21 @@
 
         .lang-title {
             text-transform: uppercase;
-            min-width: 80px;
             text-align: left;
+            min-width: 6rem;
             color: var(--white);
-            padding: 1rem 2rem 1rem 0;
-            span {
-                position: relative;
-                padding-right: 2.7rem;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    right: 0;
-                    width: 14px;
-                    background-image: url('../img/icons/arow.svg');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                }
+            padding: 1rem 2.5rem 1rem 0;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 14px;
+                background-image: url('../img/icons/arow.svg');
+                background-position: center;
+                background-repeat: no-repeat;
             }
         }
 
@@ -80,9 +95,22 @@
 
     .callback-button {
         min-width: 25rem;
+        @media all and (max-width: 1024px) {
+            font-size: 0;
+            min-width: 0;
+            width: 50px;
+            height: 50px;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTEyLjg0MyAxOC4xNTdjMS43MTMuODYyIDMuNzMgMS40ODMgNi4wOTUgMS43NS41NzQuMDY0IDEuMDYyLS4zOTYgMS4wNjItLjk3NHYtMi4xNTJhMSAxIDAgMCAwLS43NTgtLjk3bC0yLjY5My0uNjc0YTEgMSAwIDAgMC0uOTUuMjYzbC0yLjc1NiAyLjc1N1ptMCAwYy0zLjExNi0xLjU2OC01LjIyNi0zLjkzMi02LjYwMi02LjM5OG0wIDBjLTEuMzEtMi4zNS0xLjk1NS00Ljc5Mi0yLjE2Ni02LjcyOEM0LjAxMyA0LjQ2OSA0LjQ2OSA0IDUuMDM0IDRINy4xOGExIDEgMCAwIDEgLjk4LjgwNGwuNzM1IDMuNjcxYTEgMSAwIDAgMS0uMjczLjkwM2wtMi4zOCAyLjM4WiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTIuOTU0IDcuMDkyYTUgNSAwIDAgMSAzLjk2IDMuOTg4bS0zLjgxNy04LjAxM2E5IDkgMCAwIDEgNy44MjggNy43NzQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=');
+            background-position: 48% 55%;
+            background-repeat: no-repeat;
+            padding: 0;
+        }
     }
 
     .menu {
+        @media all and (max-width: 1024px) {
+            display: none;
+        }
         ul {
             list-style: none;
             display: flex;

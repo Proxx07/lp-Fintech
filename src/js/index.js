@@ -1,17 +1,14 @@
 /* Main entrypoint js */
-// import testingImport from './someModule';
-// const asyncModule = import('./asyncModule');
-// console.log('ENV', process.env.NODE_ENV);
-// console.log(testingImport);
-// asyncModule.then(({ sum }) => {
-//   console.log('sum', sum(22, 20));
-// });
 import './smoothScroll.js';
+import './localization.js';
+import burgerMenu from './burgerMenu.js';
+
+burgerMenu();
 
 const langButton = document.querySelector('.language');
-const langDropDown = langButton.querySelector('.dropdown');
+const langDropDown = langButton?.querySelector('.dropdown');
 
-langButton.addEventListener('click', () => {
+langButton?.addEventListener('click', () => {
   langDropDown.classList.toggle('opened');
 });
 

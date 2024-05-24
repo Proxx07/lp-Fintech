@@ -7,7 +7,7 @@
 
 html {
   font-size: 10px;
-
+  scroll-behavior: smooth;
   &[no-scroll] {
     overflow: hidden;
   }
@@ -50,8 +50,8 @@ img {
 /* ToDo create variables for width and padding */
 .container {
   width: 100%;
-  max-width: 1650px;
-  padding: 0 15px;
+  max-width: 1660px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -113,4 +113,3 @@ input[type='tel'] {
     }
   }
 }
-
