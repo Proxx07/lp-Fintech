@@ -1,0 +1,98 @@
+.header {
+    padding: 2rem 0 2.5rem;
+    background: var(--header-gradient);
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        min-width: 200px;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .language {
+        position: relative;
+        font: var(--font-s-b);
+        color: var(--white);
+
+        .lang-title {
+            text-transform: uppercase;
+            min-width: 80px;
+            text-align: left;
+            color: var(--white);
+            padding: 1rem 2rem 1rem 0;
+            span {
+                position: relative;
+                padding-right: 2.7rem;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 14px;
+                    background-image: url('../img/icons/arow.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        .lang-item {
+            display: block;
+            text-align: left;
+            padding: .6rem;
+            width: 100%;
+            color: var(--white);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            right: 0;
+            border-radius: var(--radius-small);
+            background: var(--header-gradient);
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: var(--transition-fast);
+            pointer-events: none;
+            z-index: 10;
+            &.opened {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+
+    .callback-button {
+        min-width: 25rem;
+    }
+
+    .menu {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: .8rem;
+            a {
+                display: inline-block;
+                padding: 1.2rem 2rem 1.2rem;
+                font: var(--font-s-b);
+                color: var(--white);
+            }
+        }
+    }
+}
