@@ -81,6 +81,9 @@ module.exports = {
           inject: 'body',
           filename: path.basename(htmlFile),
           template: path.basename(htmlFile),
+          minify: {
+            removeRedundantAttributes: false,
+          },
         }),
     ),
   ],
