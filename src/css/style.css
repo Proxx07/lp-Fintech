@@ -11,9 +11,13 @@
 }
 
 section {
-  scroll-margin-top: 90px;
+  scroll-margin-top: var(--header-height);
   h2 {
     font: var(--font-l);
+    margin-bottom: 6rem;
+    @media all and (max-width: 960px) {
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -24,13 +28,18 @@ section {
   box-shadow: 0px 0px 20px 0px #00000099;
   margin-bottom: 12rem;
   position: relative;
+  @media all and (max-width: 1024px) {
+    border-radius: 0 0 5rem 5rem;
+  }
 }
 
 .banner {
   position: relative;
   padding: 24rem 0 23rem;
   color: var(--white);
-
+  @media all and (max-width: 1024px) {
+    padding: 15rem 0 10rem; 
+  }
   h1 {
     font: var(--font-xxl);
     margin-bottom: 1.8rem;
@@ -51,18 +60,33 @@ section {
   flex-direction: column;
   gap: 4.6rem;
   color: var(--white);
+  h2 {
+    margin: 0;
+  }
+  @media all and (max-width: 1024px) {
+    gap: 2rem 
+  }
   .columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-
+    padding-top: 1rem;
+    
     .column {
-      max-width: 600px;
+      @media all and (min-width: 641px){
+        max-width: 600px;
+      }
     }
-
+    @media all and (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
     .column-title {
       font: var(--font-m-b);
       margin-bottom: 4rem;
+      @media all and (max-width: 1024px) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }
@@ -79,31 +103,45 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem 2rem;
-    padding-top: 6rem;
+    @media all and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .decisions-item-title {
     font: var(--font-m-b);
     margin-bottom: 2.5rem;
+    @media all and (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 .integrations {
   margin-bottom: 20rem;
-
-  h2 {
-    margin-bottom: 6rem;
+  @media all and (max-width: 1200px) {
+    margin-bottom: 10rem;
   }
 
   .integration-title {
     font: var(--font-m-b);
     margin-bottom: 4rem;
+    @media all and (max-width: 960px) {
+      margin-bottom: 2rem;
+    }
   }
 
   .integrations-inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 4rem;
+    @media all and (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .integration-links {
@@ -129,9 +167,6 @@ section {
 
 .actual-cases {
   margin-bottom: 12rem;
-  h2 {
-    margin-bottom: 7rem;
-  }
 
   .cases-inner {
     display: grid;
@@ -160,14 +195,16 @@ section {
 
 .partners {
   margin-bottom: 14rem;
-  h2 {
-    margin-bottom: 8rem;
+  @media all and (max-width: 768px) {
+    margin-bottom: 10rem;
   }
-
   .partners-list {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2rem;
+    @media all and (max-width: 768px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
     .partner-item {
       font-size: 0;
       display: flex;
