@@ -16,7 +16,7 @@
     --font-m-n: normal 500 2.4rem/1.5 var(--primary-font);
     --font-m-b: normal 700 2.4rem/1.5 var(--primary-font);
 
-    --font-sl: normal 700 3.6rem/1.5 var(--primary-font);
+    --font-sl: normal 700 3.2rem/1.5 var(--primary-font);
     --font-l: normal 700 4rem/1.5 var(--primary-font);
 
     --font-xxl: normal 700 5rem/1.5 var(--primary-font);
@@ -29,9 +29,9 @@
     --black: #181818;
     --grey: #797979;
 
-    --primary-05: rgba(var(--primary-rgb), 0.5);
+    --top-background: #EFF1F3;
 
-    --header-gradient: linear-gradient(to bottom, rgba(57, 70, 105, 1) -11.56%, rgba(14, 18, 39, 1) 115.02%);
+    --primary-05: rgba(var(--primary-rgb), 0.5);
 
     /* transitions */
     --transition-fast: ease 0.3s;
@@ -56,7 +56,7 @@
         --font-m-n: normal 500 2.2rem/1.5 var(--primary-font);
         --font-m-b: normal 700 2.2rem/1.5 var(--primary-font);
 
-        --font-sl: normal 700 3rem/1.5 var(--primary-font);
+        --font-sl: normal 700 2.8rem/1.5 var(--primary-font);
         --font-l: normal 700 3.4rem/1.5 var(--primary-font);
 
         --font-xxl: normal 700 4rem/1.5 var(--primary-font);
@@ -74,7 +74,7 @@
         --font-m-n: normal 500 2rem/1.5 var(--primary-font);
         --font-m-b: normal 700 2rem/1.5 var(--primary-font);
 
-        --font-sl: normal 700 2.4rem/1.5 var(--primary-font);
+        --font-sl: normal 700 2.2rem/1.5 var(--primary-font);
         --font-l: normal 700 2.6rem/1.5 var(--primary-font);
 
         --font-xxl: normal 700 3.2rem/1.5 var(--primary-font);
