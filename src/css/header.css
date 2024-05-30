@@ -28,7 +28,10 @@
         img {
             max-height: 50px;
             @media all and (max-width: 960px) {
-                max-width: 75px;
+                max-width: 115px;
+            }
+            @media all and (max-width: 480px) {
+                max-width: 90px;
             }
         }
     }

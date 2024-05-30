@@ -229,25 +229,144 @@
         </div>
       </section>
 
+      <section class="accordion container">
+        <h2>Частые вопросы</h2>
+        <div class="accordion__item">
+          <label for="acc-item-1" class="accordion__item-title">
+            <input type="radio" name="accordion" id="acc-item-1" />
+            01. Accordion title 1
+          </label>
+
+          <div class="accordion__item-content">
+            <div class="accordion__item-body">
+              <p>Accordion body 1</p>
+              <p>Accordion body 1</p>
+              <p>Accordion body 1</p>
+              <p>Accordion body 1</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <label for="acc-item-2" class="accordion__item-title">
+            <input type="radio" name="accordion" id="acc-item-2" />
+            02. Accordion title 2
+          </label>
+          <div class="accordion__item-content">
+            <div class="accordion__item-body">
+              <p>Accordion body 2</p>
+              <p>Accordion body 2</p>
+              <p>Accordion body 2</p>
+              <p>Accordion body 2</p>
+              <p>Accordion body 2</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <label for="acc-item-3" class="accordion__item-title">
+            <input type="radio" name="accordion" id="acc-item-3" />
+            03. Accordion title 3
+          </label>
+
+          <div class="accordion__item-content">
+            <div class="accordion__item-body">
+              <p>Accordion body 3</p>
+              <p>Accordion body 3</p>
+              <p>Accordion body 3</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="footer-form container">
         <form class="form-wrapper">
-          <div class="title">
+          <div class="details">
             <h2>Трансформируем Ваш бизнес!</h2>
+
+            <div class="details-item">
+              <div class="details-item-title">Call-центр</div>
+              <div class="details-item-value">
+                <a href="tel:+998555060101">+998 55 506 01 01</a>
+              </div>
+            </div>
+
+            <div class="details-item">
+              <div class="details-item-title">Почта</div>
+              <div class="details-item-value">
+                <a href="mailto:">Delivetyhub@gmail.com</a>
+              </div>
+            </div>
           </div>
           <div class="form-fields">
             <div class="fields">
-              <input type="text" placeholder="Как вас зовут?" />
-              <input type="email" placeholder="Ваш Е-mail *" required />
-              <input type="tel" placeholder="Номер телефона *" required />
-              <input type="text" placeholder="Компания" />
-              <div class="empty"></div>
+              <label for="name">
+                <span>Как вас зовут?</span>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Введите ваше имя"
+                />
+              </label>
+              <label for="email">
+                <span>Ваш Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Введите email"
+                />
+              </label>
+
+              <label for="phone">
+                <span>Номер телефона</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+998 __ ___ __ __"
+                  required
+                />
+              </label>
+
+              <label for="cashbox">
+                <span>Тип кассовой системы</span>
+                <input
+                  type="text"
+                  name="cashbox"
+                  id="cashbox"
+                  placeholder="Введите вашу касовую систему"
+                />
+              </label>
+
+              <label for="company">
+                <span>Компания</span>
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  placeholder="Название вашей компании"
+                />
+              </label>
+
+              <label for="agregator">
+                <span>С какими агрегаторами интегрировать </span>
+                <input
+                  type="text"
+                  name="agregator"
+                  id="agregator"
+                  placeholder="Введите агрегатор"
+                />
+              </label>
+
+              <div class="note">
+                Нажимая кнопку “обсудить проект”. Вы даете согласие на обработку
+                личных данных
+              </div>
               <button class="primary-button" type="submit">
                 Обсудить проект
               </button>
-            </div>
-            <div class="note">
-              Нажимая кнопку “обсудить проект”. Вы даете согласие на обработку
-              личных данных
             </div>
           </div>
         </form>
