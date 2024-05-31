@@ -131,8 +131,12 @@
             a {
                 display: inline-block;
                 padding: 1.2rem 2rem 1.2rem;
-                font: var(--font-s-b);
+                font: var(--font-es-b);
                 color: var(--black);
+                transition: var(--transition-fast);
+                &:hover {
+                    color: var(--primary);
+                }
             }
         }
     }

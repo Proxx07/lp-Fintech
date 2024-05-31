@@ -21,20 +21,18 @@ const burgerMenu = () => {
     }
   });
 
-  if (window.innerWidth < 1025) {
-    const menu = document.querySelector('.menu').cloneNode(true);
-    const menuItems = menu.querySelectorAll('a');
-    menuItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        toggleBurger();
-      });
+  const menu = document.querySelector('.menu').cloneNode(true);
+  const menuItems = menu.querySelectorAll('a');
+  menuItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      toggleBurger();
     });
-    menu.classList.add('burger-menu');
-    burgerContentPart.appendChild(menu);
+  });
+  menu.classList.add('burger-menu');
+  burgerContentPart.appendChild(menu);
 
-    const copyright = document.querySelector('.copyright').cloneNode(true);
-    burgerFooter.appendChild(copyright);
-  }
+  const copyright = document.querySelector('.copyright').cloneNode(true);
+  burgerFooter.appendChild(copyright);
 };
 
 export default burgerMenu;

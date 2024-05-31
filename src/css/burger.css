@@ -3,8 +3,8 @@
     --menu-items-text-align: center;
     --burger-content-width: 480px;
     --animation-effect: ease 0.4s;
-    --burger-contenet-background: rgba(255, 255, 255, 0.9);
-    --wrapper-background: rgba(0, 0, 0, 0.1);
+    --burger-contenet-background: var(--white);
+    --wrapper-background: var(--primary-05);
     --burger-alignment: flex-start;
     --inner-paddings: 12px;
   
@@ -36,7 +36,7 @@
       visibility: var(--visibility);
       background: var(--wrapper-background);
       transition: var(--animation-effect);
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(10px);
     }
   
     .inner {
@@ -94,6 +94,7 @@
         color: var(--black);
         display: block;
         padding: 1rem;
+        font: var(--font-s-m);
       }
     }
   

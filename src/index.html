@@ -22,22 +22,22 @@
             <span></span>
           </button>
           <div class="left">
-            <div class="logo">
+            <a href="#" class="logo">
               <img src="./img/icons/Logo.svg" alt="Fintech Platforms" />
-            </div>
+            </a>
             <nav class="menu">
               <ul>
                 <li>
-                  <a href="#" data-ln="menu_about">О нас</a>
+                  <a href="#about" data-ln="menu_about">О нас</a>
                 </li>
                 <li>
-                  <a href="#" data-ln="menu_services">Услуги</a>
+                  <a href="#partners" data-ln="menu_services">Партнёры</a>
                 </li>
                 <li>
-                  <a href="#" data-ln="menu_cases">Кейсы</a>
+                  <a href="#faq" data-ln="menu_cases">Частые вопросы</a>
                 </li>
                 <li>
-                  <a href="#" data-ln="menu_contacts">Контакты</a>
+                  <a href="#contacts" data-ln="menu_contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -53,8 +53,9 @@
               </div>
             </div>
             <button
-              class="callback-button primary-button"
+              class="callback-button primary-button popup-trigger-btn"
               data-ln="callback_button"
+              data-target="popup-form"
             >
               Связаться с нами
             </button>
@@ -67,7 +68,7 @@
           <div class="details">
             <h2>
               Интеграция сервисов <br />
-              доcтавки c вашей POS системой
+              доставки c вашей POS системой
             </h2>
 
             <div class="text">
@@ -180,60 +181,55 @@
         </section>
       </div>
 
-      <section class="partners container">
+      <section class="partners container" id="partners">
         <h2>Нам Доверяют</h2>
 
-        <div class="partners-list">
-          <div class="partner-item">
-            <img src="./img/partners/KFC.png" alt="KFC" />
+        <div class="partner-items-wrap">
+          <div class="partners-list">
+            <div class="partner-item">
+              <img src="./img/partners/KFC.png" alt="KFC">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/yujanin.png" alt="Yujanin">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/dominos.png" alt="Dominos">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/oqtepa-lavash.png" alt="OqtepaLavash">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/syrovarnya.png" alt="Syrovarnya">
+            </div>
           </div>
-          <div class="partner-item">
-            <img src="./img/partners/aloqa.png" alt="AloqaBank" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/dominos.png" alt="Domino's" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/multicard.png" alt="Multicard" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/syrovarnya.png" alt="Syrovarnya" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/m-partner.png" alt="M" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/credit-express.png" alt="Credit express" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/yujanin.png" alt="Yujanin" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/oqtepa-lavash.png" alt="Oqtepa Lavash" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/trast.png" alt="TrastBank" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/yandex.png" alt="Yandex" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/pro-hinkali.png" alt="Pro.Hinkali" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/it-bilm.png" alt="IT-Bilm" />
-          </div>
-          <div class="partner-item">
-            <img src="./img/partners/multibank.png" alt="MultiBank" />
+        </div>
+
+        <div class="partner-items-wrap" data-reverse>
+          <div class="partners-list">
+            <div class="partner-item">
+              <img src="./img/partners/pro-hinkali.png" alt="ProHinkali">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/M.png" alt="M">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/shahlik-uz.png" alt="ShahlikUZ">
+            </div>
+            <div class="partner-item">
+              <img src="./img/partners/burger-co.png" alt="BurgerCo">
+            </div>
+            <div class="partner-item"> 
+              <img src="./img/partners/basri-baba.png" alt="BarsiBaba">
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="accordion container">
+      <section class="accordion container" id="faq">
         <h2>Частые вопросы</h2>
         <div class="accordion__item">
           <label for="acc-item-1" class="accordion__item-title">
-            <input type="radio" name="accordion" id="acc-item-1" />
+            <input type="checkbox" name="accordion" id="acc-item-1" />
             01. Какие продукты и услуги предлагает ваша компания?
           </label>
 
@@ -250,7 +246,7 @@
 
         <div class="accordion__item">
           <label for="acc-item-2" class="accordion__item-title">
-            <input type="radio" name="accordion" id="acc-item-2" />
+            <input type="checkbox" name="accordion" id="acc-item-2" />
             02. Какие преимущества получает клиент, работая с вами?
           </label>
           <div class="accordion__item-content">
@@ -267,7 +263,7 @@
 
         <div class="accordion__item">
           <label for="acc-item-3" class="accordion__item-title">
-            <input type="radio" name="accordion" id="acc-item-3" />
+            <input type="checkbox" name="accordion" id="acc-item-3" />
             03. Сколько времени занимает интеграция с вашими системами?
           </label>
 
@@ -284,8 +280,8 @@
         </div>
       </section>
 
-      <section class="footer-form container">
-        <form class="form-wrapper">
+      <section class="footer-form container" id="contacts">
+        <div class="form-wrapper">
           <div class="details">
             <h2>Трансформируем Ваш бизнес!</h2>
 
@@ -303,7 +299,7 @@
               </div>
             </div>
           </div>
-          <div class="form-fields">
+          <form class="form-fields">
             <div class="fields">
               <label for="name">
                 <span>Как вас зовут?</span>
@@ -373,8 +369,8 @@
                 Обсудить проект
               </button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
 
       <footer class="footer container">
@@ -403,6 +399,18 @@
           <div class="burger-footer"></div>
         </div>
       </div>
+
+      <div class="popup-modal" id="popup-form">
+        <div class="backdrop"></div>
+        <div class="inner">
+          <div class="body">
+            <div class="close"></div>
+            <div class="title">Оставьте заявку</div>
+            <div class="form"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   </body>
 </html>

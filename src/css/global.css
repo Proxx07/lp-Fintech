@@ -1,3 +1,14 @@
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -110,19 +121,24 @@ input[type='text'],
 input[type='email'],
 input[type='tel'] {
   border-radius: var(--radius-small);
-  border: 1px solid var(--white);
-  color: var(--white);
-  outline: none;
+  border: 1px solid currentColor;
+  color: inherit;
   font: var(--font-s-n);
+  outline: none;
   background: none;
   padding: 1rem 2rem;
   width: 100%;
+  transition: var(--transition-fast);
   &::placeholder {
     transition: var(--transition-fast);
   }
+
   &:focus {
+    border-color: var(--primary);
+    background: var(--primary-02);
     &::placeholder {
       opacity: 0;
+      font-size: 0;
     }
   }
 }
@@ -234,7 +250,7 @@ section {
   
   border-bottom: 1px solid var(--grey);
   
-  input[type="radio"]{
+  input {
     display: none;
   }
 }

@@ -1,0 +1,87 @@
+.popup-modal {
+    --pointer-events: none;
+    --backdrop-bg: var(--primary-05);
+    --animation-transition: ease 0.4s;
+    --content-bg: rgb(255, 255, 255);
+  
+    --opacity: 0;
+    --visibility: hidden;
+    --transform-scale: 0.9;
+  
+    position: fixed;
+    inset: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    pointer-events: var(--pointer-events);
+    z-index: 1000;
+  
+    &:has(.success) {
+      .body > .title {
+        display: none;
+      }
+    }
+  
+    &.open {
+      --visibility: visible;
+      --opacity: 1;
+      --pointer-events: all;
+      --transform-scale: 1;
+    }
+  
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      background: var(--backdrop-bg);
+      transition: var(--animation-transition);
+      visibility: var(--visibility);
+      opacity: var(--opacity);
+      backdrop-filter: blur(10px);
+    }
+  
+    .inner {
+      max-height: 100%;
+      max-width: 72rem;
+      width: 100%;
+    }
+  
+    .body {
+      background: var(--content-bg);
+      position: relative;
+      padding: 3rem;
+      transition: var(--animation-transition);
+      opacity: var(--opacity);
+      transform: scale(var(--transform-scale));
+      animation-delay: 0.2s;
+      border-radius: 10px;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @media all and (max-width: 640px) {
+        padding: 2rem;
+      }
+    }
+  
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font: var(--font-m-b);
+    }
+  
+    .close {
+      cursor: pointer;
+      position: absolute;
+      right: -1rem;
+      top: -1rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2725%27 fill=%27none%27%3E%3Cpath d=%27M6.758 17.743 12 12.5l5.243 5.243m0-10.486L12 12.5 6.758 7.257%27 stroke=%27%23fff%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 opacity=%271%27/%3E%3C/svg%3E") 50% 50% / auto 2.2rem no-repeat;
+      background-color: var(--black);
+    }
+  }

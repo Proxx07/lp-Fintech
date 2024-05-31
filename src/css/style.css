@@ -3,6 +3,7 @@
 
 @import url('./header.css');
 @import url('./burger.css');
+@import url('./popup.css');
 
 .site-wrapper {
   min-height: 100vh;
@@ -139,24 +140,83 @@
   }
 }
 
+
 .partners {
   margin-bottom: 14rem;
   @media all and (max-width: 768px) {
     margin-bottom: 6rem;
   }
+
+
   .partners-list {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2rem;
+    display: flex;
+    width: 1420px;
+    flex-shrink: 0;
     @media all and (max-width: 768px) {
-      grid-template-columns: repeat(5, 1fr);
+      width: 1024px;
     }
     .partner-item {
       font-size: 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 20%;
+      padding: 1rem;
+      transition: var(--transition-fast);
+      cursor: pointer;
+      @media all and (min-width: 1025px) {
+        filter: grayscale(1);
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+      img {
+        width: 17rem;
+        max-width: 100%;
+      }
     }
+  }
+
+  
+  .partner-items-wrap {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    gap: 2rem;
+
+    &.marquee {
+      &:hover {
+        .partners-list {
+          animation-play-state: paused;
+        }  
+      }
+      .partners-list {
+        animation: scroll 15s linear infinite;
+        &.reverse {
+          animation-direction: reverse;
+        }
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 10%;
+      background: linear-gradient(90deg, var(--white) 0%, transparent 100%);
+      z-index: 10;
+    }
+
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+      transform: rotateY(180deg);
+    }
+
   }
 }
 
@@ -168,7 +228,6 @@
 }
 
 .footer-form {
-  
   h2 {
     margin: 0;
     max-width: 40rem;
@@ -224,7 +283,10 @@
       }
     }
   }
-  
+}
+
+.footer-form,
+.popup-modal {
   .form-fields {
     .fields {
       display: grid;
@@ -239,6 +301,7 @@
     .note {
       font: var(--font-es-n);
       color: var(--grey);
+      font-size: 1.4rem;
     }
   }
 }
