@@ -13,10 +13,7 @@ const integrations = document.querySelectorAll('.integration');
 if (integrations) {
   integrations.forEach((item) => {
     const listWrapper = item.querySelector('.list');
-    listWrapper.style.setProperty(
-      '--count',
-      listWrapper.querySelectorAll('.list-item').length
-    );
+    listWrapper.style.setProperty('--count', listWrapper.querySelectorAll('.list-item').length);
   });
 }
 

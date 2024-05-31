@@ -47,7 +47,7 @@
             <div class="language">
               <button class="lang-title">Ру</button>
               <div class="dropdown lang-buttons">
-                <button class="lang-item" data-key="uz">O'z</button>
+                <!-- <button class="lang-item" data-key="uz">O'z</button> -->
                 <button class="lang-item" data-key="ru">Ру</button>
                 <button class="lang-item" data-key="en">En</button>
               </div>
@@ -64,14 +64,14 @@
       </header>
 
       <div class="integrations-wrapper">
-        <section class="integration container">
+        <section class="integration container main-banner">
           <div class="details">
-            <h2>
+            <h2 data-ln="banner_title">
               Интеграция сервисов <br />
               доставки c вашей POS системой
             </h2>
 
-            <div class="text">
+            <div class="text" data-ln="banner_subtitle">
               Все заказы от сервисов доставки напрямую в вашу POS-систему для
               максимального удобства.
             </div>
@@ -79,15 +79,15 @@
             <div class="list">
               <div class="list-item">
                 <div class="title">250+</div>
-                <div class="text">Довольных рестораннов</div>
+                <div class="text" data-ln="advantage_1">Довольных рестораннов</div>
               </div>
               <div class="list-item">
                 <div class="title">20 000+</div>
-                <div class="text">Заказов в сутки</div>
+                <div class="text" data-ln="advantage_2">Заказов в сутки</div>
               </div>
               <div class="list-item">
-                <div class="title">6 лет</div>
-                <div class="text">На рынке</div>
+                <div class="title">6 <span data-ln="years">лет</span></div>
+                <div class="text" data-ln="advantage_3">На рынке</div>
               </div>
             </div>
           </div>
@@ -98,8 +98,8 @@
         </section>
 
         <section class="about container" id="about">
-          <h2>О нас</h2>
-          <div class="text">
+          <h2 data-ln="about_title">О нас</h2>
+          <div class="text" data-ln="about_body">
             <p>
               Наша компания была основана группой экспертов в области IT и
               ресторанного бизнеса, которые объединили свои усилия, чтобы
@@ -119,9 +119,9 @@
 
         <section class="integration container reverse">
           <div class="details">
-            <h2>Интеграция с POS</h2>
+            <h2 data-ln="integration_title">Интеграция с POS</h2>
 
-            <div class="text">
+            <div class="text" data-ln="integration_body">
               Простое подключение к POS для автоматического обмена меню и
               заказами с сервисами доставки еды.
             </div>
@@ -149,9 +149,9 @@
 
         <section class="integration container">
           <div class="details">
-            <h2>Агрегаторы доставки еды</h2>
+            <h2 data-ln="agregators_title">Агрегаторы доставки еды</h2>
 
-            <div class="text">
+            <div class="text" data-ln="agregators_body">
               <p>
                 Delivery hub позволяет связать вашу POS систему с Яндекс, Узум
                 тезкоп,Экспрес 24 и другие
@@ -182,7 +182,7 @@
       </div>
 
       <section class="partners container" id="partners">
-        <h2>Нам Доверяют</h2>
+        <h2 data-ln="partners_title">Нам Доверяют</h2>
 
         <div class="partner-items-wrap">
           <div class="partners-list">
@@ -226,15 +226,17 @@
       </section>
 
       <section class="accordion container" id="faq">
-        <h2>Частые вопросы</h2>
+        <h2 data-ln="faq_title">Частые вопросы</h2>
         <div class="accordion__item">
           <label for="acc-item-1" class="accordion__item-title">
             <input type="checkbox" name="accordion" id="acc-item-1" />
-            01. Какие продукты и услуги предлагает ваша компания?
+            <span data-ln="faq_title1">
+              01. Какие продукты и услуги предлагает ваша компания?
+            </span>
           </label>
 
           <div class="accordion__item-content">
-            <div class="accordion__item-body">
+            <div class="accordion__item-body" data-ln="faq_body1">
               <p>
                 Мы предлагаем широкий спектр решений, включая интеграцию с
                 POS-системами, управление меню и заказами, аналитику и
@@ -247,10 +249,12 @@
         <div class="accordion__item">
           <label for="acc-item-2" class="accordion__item-title">
             <input type="checkbox" name="accordion" id="acc-item-2" />
-            02. Какие преимущества получает клиент, работая с вами?
+            <span data-ln="faq_title2">
+              02. Какие преимущества получает клиент, работая с вами?
+            </span>
           </label>
           <div class="accordion__item-content">
-            <div class="accordion__item-body">
+            <div class="accordion__item-body" data-ln="faq_body2">
               <p>
                 Наши клиенты получают доступ к передовым технологиям, которые
                 помогают им улучшить качество обслуживания, повысить
@@ -264,11 +268,13 @@
         <div class="accordion__item">
           <label for="acc-item-3" class="accordion__item-title">
             <input type="checkbox" name="accordion" id="acc-item-3" />
-            03. Сколько времени занимает интеграция с вашими системами?
+            <span data-ln="faq_title3">
+              03. Сколько времени занимает интеграция с вашими системами?
+            </span>
           </label>
 
           <div class="accordion__item-content">
-            <div class="accordion__item-body">
+            <div class="accordion__item-body" data-ln="faq_body3">
               <p>
                 Время интеграции зависит от конкретных потребностей клиента и
                 сложности проекта. Мы стремимся к оперативной интеграции, чтобы
@@ -283,17 +289,17 @@
       <section class="footer-form container" id="contacts">
         <div class="form-wrapper">
           <div class="details">
-            <h2>Трансформируем Ваш бизнес!</h2>
+            <h2 data-ln="footer_title">Трансформируем Ваш бизнес!</h2>
 
             <div class="details-item">
-              <div class="details-item-title">Call-центр</div>
+              <div class="details-item-title" data-ln="call_center">Call-центр</div>
               <div class="details-item-value">
                 <a href="tel:+998555060101">+998 55 506 01 01</a>
               </div>
             </div>
 
             <div class="details-item">
-              <div class="details-item-title">Почта</div>
+              <div class="details-item-title" data-ln="email">Почта</div>
               <div class="details-item-value">
                 <a href="mailto:">Delivetyhub@gmail.com</a>
               </div>
@@ -302,26 +308,26 @@
           <form class="form-fields">
             <div class="fields">
               <label for="name">
-                <span>Как вас зовут?</span>
+                <span data-ln="name_title">Как вас зовут?</span>
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Введите ваше имя"
+                  data-ln="name_placeholder"
                 />
               </label>
               <label for="email">
-                <span>Ваш Email</span>
+                <span data-ln="email_title">Ваш Email</span>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Введите email"
+                  data-ln="email_placeholder"
                 />
               </label>
 
               <label for="phone">
-                <span>Номер телефона</span>
+                <span data-ln="phone_title">Номер телефона</span>
                 <input
                   type="tel"
                   name="phone"
@@ -331,43 +337,47 @@
                 />
               </label>
 
-              <label for="cashbox">
-                <span>Тип кассовой системы</span>
+              <label for="cashBox">
+                <span data-ln="cashbox_title">Тип кассовой системы</span>
                 <input
                   type="text"
-                  name="cashbox"
-                  id="cashbox"
-                  placeholder="Введите вашу касовую систему"
+                  name="cashBox"
+                  id="cashBox"
+                  data-ln="cashbox_placeholder"
                 />
               </label>
 
               <label for="company">
-                <span>Компания</span>
+                <span data-ln="company_title">Компания</span>
                 <input
                   type="text"
                   name="company"
                   id="company"
-                  placeholder="Название вашей компании"
+                  data-ln="company_placeholder"
                 />
               </label>
 
               <label for="agregator">
-                <span>С какими агрегаторами интегрировать </span>
+                <span data-ln="aggregator_title">С какими агрегаторами интегрировать </span>
                 <input
                   type="text"
                   name="agregator"
                   id="agregator"
-                  placeholder="Введите агрегатор"
+                  data-ln="aggregator_placeholder"
                 />
               </label>
 
-              <div class="note">
+              <div class="note" data-ln="agreement_text">
                 Нажимая кнопку “обсудить проект”. Вы даете согласие на обработку
                 личных данных
               </div>
-              <button class="primary-button" type="submit">
+              <button class="primary-button" type="submit" data-ln="button_text">
                 Обсудить проект
               </button>
+            </div>
+
+            <div class="status-overlay">
+              <div class="state"></div>
             </div>
           </form>
         </div>
@@ -405,7 +415,7 @@
         <div class="inner">
           <div class="body">
             <div class="close"></div>
-            <div class="title">Оставьте заявку</div>
+            <div class="title" data-ln="popup_form_title">Оставьте заявку</div>
             <div class="form"></div>
           </div>
         </div>

@@ -18,12 +18,6 @@
     pointer-events: var(--pointer-events);
     z-index: 1000;
   
-    &:has(.success) {
-      .body > .title {
-        display: none;
-      }
-    }
-  
     &.open {
       --visibility: visible;
       --opacity: 1;
