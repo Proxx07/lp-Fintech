@@ -42,6 +42,7 @@ if (partners) {
 
   listWrapper?.forEach((wrap) => {
     const list = wrap.querySelector('.partners-list');
+    list.style.setProperty('--count', list.querySelectorAll('.partner-item').length);
     list.classList.toggle('reverse', wrap.hasAttribute('data-reverse'));
     const innerClone = list.cloneNode(true);
     wrap.appendChild(innerClone);

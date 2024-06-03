@@ -74,12 +74,24 @@
     @media all and (max-width: 960px) {
       gap: 1.5rem;
     }
+    @media all and (max-width: 640px) {
+      .text {
+        text-align: center;
+      }
+    }
   }
 
   .list {
     display: grid;
     grid-template-columns: repeat(var(--count), 1fr);
     gap: 2rem;
+    @media all and (max-width: 1024px) {
+      max-width: 64rem;
+      margin: 0 auto;
+    }
+    @media all and (max-width: 640px) {
+      max-width: 80%;
+    }
     @media all and (max-width: 480px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -115,6 +127,10 @@
     position: relative;
     display: flex;
     justify-content: center;
+    @media all and (max-width: 640px) {
+      max-width: 65%;
+      margin: 0 auto;
+    }
     img {
       position: relative;
       z-index: 2;
@@ -173,26 +189,18 @@
     @media all and (max-width: 768px) {
       width: 1024px;
     }
-    @media all and (max-width: 480px) {
-      width: 600px;
-    }
+
     .partner-item {
       font-size: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 20%;
+      width: calc(100% / var(--count));
       padding: 1rem;
       transition: var(--transition-fast);
       cursor: pointer;
-      @media all and (min-width: 1025px) {
-        filter: grayscale(1);
-        &:hover {
-          filter: grayscale(0);
-        }
-      }
+      
       img {
-        width: 17rem;
         max-width: 100%;
       }
     }
@@ -206,13 +214,6 @@
     gap: 2rem;
 
     &.marquee {
-      @media all and (min-width: 1025px) {
-        &:hover {
-          .partners-list {
-            animation-play-state: paused;
-          }  
-        }
-      }
       .partners-list {
         animation: scroll 40s linear infinite;
         &.reverse {
