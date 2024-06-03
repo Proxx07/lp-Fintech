@@ -127,6 +127,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     @media all and (max-width: 640px) {
       max-width: 65%;
       margin: 0 auto;
